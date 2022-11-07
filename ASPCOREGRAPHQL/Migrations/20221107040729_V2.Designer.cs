@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASPCOREGRAPHQL.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221028064932_V1")]
-    partial class V1
+    [Migration("20221107040729_V2")]
+    partial class V2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

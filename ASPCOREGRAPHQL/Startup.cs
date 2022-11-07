@@ -28,11 +28,13 @@ namespace ASPCOREGRAPHQL
         {
             services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DataConnStr")));
             services.AddScoped<IEmployeeRepository, EmployeeReposirory>();
+            services.AddScoped<IDepartmentRepository, DepartmentRepositoryService>();
             services.AddScoped<AppSchema>();
 
             services.AddGraphQL()
                 .AddSystemTextJson()
-                .AddGraphTypes(typeof(AppSchema), ServiceLifetime.Scoped);
+                .AddGraphTypes(typeof(AppSchema), ServiceLifetime.Scoped)
+                .AddDataLoader();
 
             services.AddControllers()
                 .AddNewtonsoftJson(o => o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);

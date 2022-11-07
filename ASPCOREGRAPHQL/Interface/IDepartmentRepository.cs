@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace ASPCOREGRAPHQL.Interface
 {
-    interface IDepartment
+    public interface IDepartmentRepository
     {
-        List<Department> Get();
         Department Insert(Department model);
-        Department Update(string id,Department model);
-        string Delete(string id);
     }
 }

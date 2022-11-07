@@ -1,4 +1,5 @@
-﻿using ASPCOREGRAPHQL.GraphQL.GraphQLQueries;
+﻿using ASPCOREGRAPHQL.GraphQL.GraphQLMutation;
+using ASPCOREGRAPHQL.GraphQL.GraphQLQueries;
 using GraphQL.Types;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -14,6 +15,7 @@ namespace ASPCOREGRAPHQL.GraphQL.GraphQLSchema
         : base(provider)
         {
             Query = provider.GetRequiredService<AppQuery>();
+            Mutation = provider.GetRequiredService<AppMutation>();          
         }
     }
 }

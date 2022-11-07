@@ -9,9 +9,9 @@ namespace ASPCOREGRAPHQL.Interface
     public interface IEmployeeRepository
     {
         IEnumerable<Employee> GetAll();
+        Employee GetById(string id);
         Employee Insert(Employee model);
-        IEnumerable<EmployeeDetail> GetByGroup();
-        Employee Update(string id, Employee model);
+        Employee Update(Employee model);
         string Delete(string id);
     }
 }

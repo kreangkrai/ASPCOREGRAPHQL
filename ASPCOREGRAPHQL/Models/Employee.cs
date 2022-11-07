@@ -15,6 +15,6 @@ namespace ASPCOREGRAPHQL.Models
         public string EmployeeId { get; set; }
         public string DepartmentId { get; set; }
         public string Name { get; set; }
-        public decimal Salary { get; set; }
+        public int Salary { get; set; }
     }
 }
